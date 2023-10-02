@@ -1,0 +1,33 @@
+body{
+    background-color: white;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 55vw;
+}
+
+.gameContainer div {
+    display: flex;
+    justify-content: center;
+    
+}
+
+input {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    margin: 5px;
+    font-size: 3vw;
+    color: white;
+    background-color: green;
+}
+
+input:hover{
+    background-color: chartreuse;
+}
