@@ -1,30 +1,10 @@
-let a1 = document.getElementById("a1");
-let a2 = document.getElementById("a2");
-let a3 = document.getElementById("a3");
+const cells = document.querySelectorAll("input");
 
-let b1 = document.getElementById("b1");
-let b2 = document.getElementById("b2");
-let b3 = document.getElementById("b3");
-
-let c1 = document.getElementById("c1");
-let c2 = document.getElementById("c2");
-let c3 = document.getElementById("c3");
-
-a1.addEventListener("click", playerChange);
-a2.addEventListener("click", playerChange);
-a3.addEventListener("click", playerChange);
-
-b1.addEventListener("click", playerChange);
-b2.addEventListener("click", playerChange);
-b3.addEventListener("click", playerChange);
-
-c1.addEventListener("click", playerChange);
-c2.addEventListener("click", playerChange);
-c3.addEventListener("click", playerChange);
+for (let i = 0; i < cells.length; i++) {
+  cells[i].addEventListener("click", playerChange); 
+}
 
 let X = 0;
-let O = 1;
-
 function playerChange(remove) {
   if (X % 2 === 0) {
     this.value = "X";
