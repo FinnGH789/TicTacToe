@@ -16,7 +16,7 @@ function playerChange(remove) {
     X++;
     remove.target.removeEventListener("click", playerChange);
   }
-  let zahl = 0;
+  let isFieldFull = 0;
 
   function detectWinner() {
 
@@ -32,7 +32,7 @@ function playerChange(remove) {
         cells[1].value === "X" && cells[4].value === "X" && cells[7].value === "X" ||
         cells[2].value === "X" && cells[5].value === "X" && cells[8].value === "X"
         ) {
-        zahl++;
+        isFieldFull++;
         alert("Player X has won!");
         location.reload();
     }else if(
@@ -46,7 +46,7 @@ function playerChange(remove) {
         cells[1].value === "O" && cells[4].value === "O" && cells[7].value === "O" ||
         cells[2].value === "O" && cells[5].value === "O" && cells[8].value === "O"
       ) {
-        zahl++;
+        isFieldFull++;
         alert("Player O has won!");
         location.reload();
     }
@@ -54,13 +54,14 @@ function playerChange(remove) {
   }
 
   function draw(){
-    if(X === 9 && zahl != 1){
+    if(X === 9 && isFieldFull != 1){
       alert('Unentschieden, versuchen sie es erneut!');
       location.reload();
     }
   }
 
   detectWinner();
+
   draw();
 
 }
